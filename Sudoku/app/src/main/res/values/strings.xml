@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sudoku</string>
+    <string name="title_sudoku">Sudoku</string>
+    <string name="hint_filas">Filas…</string>
+    <string name="hint_columnas">Columnas…</string>
+    <string name="x">X</string>
+    <string name="play_button">Jugar</string>
+</resources>

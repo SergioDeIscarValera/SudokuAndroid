@@ -18,41 +18,17 @@
             android:layout_height="48dp"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/editTextNumber"
+            android:id="@+id/textSizeInput"
             app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="30dp" app:layout_constraintEnd_toStartOf="@+id/guideline"
-            android:textColor="@color/light" android:textColorHint="@color/info" android:hint="@string/hint_filas"
-            android:backgroundTint="@color/secondary"/>
-    <EditText
-            android:layout_width="150dp"
-            android:layout_height="48dp"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editTextNumber2"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="30dp" app:layout_constraintStart_toStartOf="@+id/guideline"
-            android:textColor="@color/light" android:textColorHint="@color/info" android:hint="@string/hint_columnas"
-            android:backgroundTint="@color/secondary"/>
-    <androidx.constraintlayout.widget.Guideline
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:layout_constraintGuide_begin="205dp" android:id="@+id/guideline"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="205dp"
-            android:layout_marginEnd="206dp" app:layout_constraintEnd_toEndOf="parent"/>
-    <TextView
-            android:text="@string/x"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView2"
-            app:layout_constraintEnd_toStartOf="@+id/editTextNumber2"
-            app:layout_constraintStart_toEndOf="@+id/editTextNumber"
-            app:layout_constraintTop_toBottomOf="@+id/textView" android:layout_marginTop="33dp"
-            android:textColor="@color/light" android:textSize="30sp"/>
+            android:layout_marginTop="30dp"
+            android:textColor="@color/light" android:textColorHint="@color/info" android:hint="@string/hint_size"
+            android:backgroundTint="@color/secondary" app:layout_constraintEnd_toEndOf="parent"/>
     <Button
             android:text="@string/play_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/button"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="30dp"
-            android:backgroundTint="@color/primary" android:textSize="34sp" android:textColor="@color/dark"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/primary" android:textSize="34sp" android:textColor="@color/dark"
+            app:layout_constraintTop_toBottomOf="@+id/textSizeInput" android:layout_marginTop="30dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

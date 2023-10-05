@@ -3,6 +3,7 @@ package com.sergiodeiscar.sudoku
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.sergiodeiscar.sudoku.constanst.SIZE_EXTRA
 import com.sergiodeiscar.sudoku.databinding.ActivityMainBinding
 import com.sergiodeiscar.sudoku.view.SudokuActivity
 
@@ -14,12 +15,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.button.setOnClickListener {
-            /*val fila = binding.editTextNumber.text.toString().toInt()
-            val columna = binding.editTextNumber2.text.toString().toInt()*/
-            val intent = Intent(this, SudokuActivity::class.java)/*.apply {
-                putExtra(FILA_EXTRA, fila)
-                putExtra(COLUMNA_EXTRA, columna)
-            }*/
+            val size = binding.textSizeInput.text.toString().toInt()
+            val intent = Intent(this, SudokuActivity::class.java).apply {
+                putExtra(SIZE_EXTRA, size)
+            }
             startActivity(intent)
         }
     }

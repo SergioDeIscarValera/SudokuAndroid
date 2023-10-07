@@ -15,10 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.button.setOnClickListener {
-            val size = binding.textSizeInput.text.toString().toInt()
-            val intent = Intent(this, SudokuActivity::class.java).apply {
-                putExtra(SIZE_EXTRA, size)
-            }
+            val intent = Intent(this, SudokuActivity::class.java)
             startActivity(intent)
         }
     }

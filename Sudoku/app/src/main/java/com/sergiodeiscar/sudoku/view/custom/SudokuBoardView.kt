@@ -29,7 +29,7 @@ class SudokuBoardView(context: Context, attributeView: AttributeSet): View(conte
     private val thickLinePath = Paint().apply {
         style = Paint.Style.STROKE
         color = Color.BLACK
-        strokeWidth = 4F
+        strokeWidth = 6F
     }
 
     /**
@@ -46,7 +46,6 @@ class SudokuBoardView(context: Context, attributeView: AttributeSet): View(conte
      */
     private val selectedCellPaint = Paint().apply {
         style = Paint.Style.FILL_AND_STROKE
-        //color = Color.parseColor("#6ead3a")
         color = context.getColor(R.color.primary)
     }
 
@@ -108,13 +107,6 @@ class SudokuBoardView(context: Context, attributeView: AttributeSet): View(conte
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         val sizePixels = widthMeasureSpec.coerceAtMost(heightMeasureSpec)
         setMeasuredDimension(sizePixels, sizePixels)
-    }
-
-    fun setSize(size: Int){
-        this.size = size
-        this.sqrtSize = sqrt(size.toDouble()).toInt()
-        updateMeasurements(width)
-        invalidate()
     }
 
     /**

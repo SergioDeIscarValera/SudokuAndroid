@@ -2,7 +2,7 @@ package com.sergiodeiscar.sudoku.game
 
 import kotlin.math.sqrt
 
-data class Board(val size: Int, var cells: List<Cell>) {
+data class Board(val size: Int = 9, var cells: List<Cell>) {
     /**
      * Función que devuelve una celda del tablero
      * @param row Fila de la celda

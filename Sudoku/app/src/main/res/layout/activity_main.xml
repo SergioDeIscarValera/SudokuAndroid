@@ -11,18 +11,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textView"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="200dp" android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="260dp" android:textSize="48sp"
             android:textColor="@color/primary"/>
-    <EditText
-            android:layout_width="150dp"
-            android:layout_height="48dp"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/textSizeInput"
-            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="30dp"
-            android:textColor="@color/light" android:textColorHint="@color/info" android:hint="@string/hint_size"
-            android:backgroundTint="@color/secondary" app:layout_constraintEnd_toEndOf="parent"/>
+
     <Button
             android:text="@string/play_button"
             android:layout_width="wrap_content"
@@ -30,5 +21,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:backgroundTint="@color/primary" android:textSize="34sp" android:textColor="@color/dark"
-            app:layout_constraintTop_toBottomOf="@+id/textSizeInput" android:layout_marginTop="30dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView" android:layout_marginTop="30dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

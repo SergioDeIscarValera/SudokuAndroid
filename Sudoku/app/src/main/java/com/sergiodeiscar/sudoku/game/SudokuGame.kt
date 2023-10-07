@@ -30,9 +30,9 @@ class SudokuGame {
 
     private lateinit var board: Board
 
-    /*init {
+    init {
         startValues(40)
-    }*/
+    }
 
     /**
      * Función que se encarga de manejar la entrada de un número en el tablero,
@@ -123,14 +123,17 @@ class SudokuGame {
     }
 
     fun reset() {
-        /*board.restCells(cellsNotEdited)
+        board.cells.forEach {
+            if (!it.isStartingCell) {
+                it.value = 0
+                it.notes.clear()
+            }
+        }
+        selectedCol = -1
+        selectedRow = -1
+        isTakingNotes = false
         selectedCellLiveData.postValue(Pair(selectedRow, selectedCol))
         cellsLiveData.postValue(board.cells)
-        isTakingNotesLiveData.postValue(isTakingNotes)*/
-    }
-
-    fun setSize(size: Int) {
-        this.size = size
-        startValues(size * size / 2)
+        isTakingNotesLiveData.postValue(isTakingNotes)
     }
 }
